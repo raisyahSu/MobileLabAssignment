@@ -7,10 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF8E1"
-    android:padding="24dp"
+    android:paddingBottom="24dp"
     tools:context=".MainActivity">
 
-    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -20,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -33,60 +31,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Inputs -->
     <EditText
         android:id="@+id/edtVehiclePrice"
-        android:layout_width="296dp"
-        android:layout_height="47dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/input_box"
         android:hint="Vehicle Price (RM)"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:padding="12dp"
+        app:layout_constraintWidth_percent="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <EditText
         android:id="@+id/edtDownPayment"
-        android:layout_width="296dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/input_box"
         android:hint="Down Payment (RM)"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:padding="12dp"
+        app:layout_constraintWidth_percent="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtVehiclePrice" />
 
     <EditText
         android:id="@+id/edtLoanPeriod"
-        android:layout_width="297dp"
-        android:layout_height="47dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/input_box"
         android:hint="Loan Period (Years)"
         android:inputType="number"
         android:padding="12dp"
+        app:layout_constraintWidth_percent="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtDownPayment" />
 
     <EditText
         android:id="@+id/edtInterestRate"
-        android:layout_width="300dp"
-        android:layout_height="47dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/input_box"
         android:hint="Interest Rate (%)"
         android:inputType="numberDecimal"
         android:padding="12dp"
+        app:layout_constraintWidth_percent="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtLoanPeriod" />
 
-    <!-- Button Calculate -->
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
@@ -99,26 +99,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
-
-    <!-- Result Box -->
     <LinearLayout
         android:id="@+id/resultBox"
-        android:layout_width="291dp"
-        android:layout_height="42dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_box"
         android:orientation="vertical"
         android:padding="18dp"
+        app:layout_constraintWidth_percent="0.8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnCalculate">
 
         <TextView
             android:id="@+id/txtResult"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:text="Calculation results will appear here."
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,7 +37,7 @@ public class AboutActivity extends AppCompatActivity {
         TextView tvGithub = findViewById(R.id.tvGithub);
         tvGithub.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://github.com/YOUR_REPO_HERE")))
+                        Uri.parse("https://github.com/raisyahSu/MobileLabAssignment")))
         );
     }
 
